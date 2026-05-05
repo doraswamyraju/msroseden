@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#ffb4a8",
+                        "primary-container": "#8b0000",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-variant": "#333535",
+                        "on-surface-variant": "#e3beb8",
+                        "surface": "#121414",
+                        "outline-variant": "#5a403c",
+                        "secondary": "#c9c6c5",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-background": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#282a2b",
+                        "tertiary-container": "#434242",
+                        "primary-fixed": "#ffdad4",
+                        "surface-container": "#1e2020",
+                        "on-error": "#690005",
+                        "on-tertiary": "#313030",
+                        "on-surface": "#e2e2e2",
+                        "secondary-container": "#474646",
+                        "on-secondary": "#313030",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary-fixed": "#e5e2e1",
+                        "background": "#121414",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#410000",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-surface": "#e2e2e2",
+                        "on-secondary-container": "#b7b4b4",
+                        "surface-bright": "#38393a",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#b1aeae",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "primary": "#ffb4a8",
+                        "outline": "#aa8984",
+                        "tertiary": "#c8c6c5",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-low": "#1a1c1c",
+                        "on-primary-container": "#ff907f",
+                        "on-primary": "#690000",
+                        "inverse-primary": "#b52619",
+                        "surface-dim": "#121414",
+                        "surface-container-highest": "#333535",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#2f3131",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#920703"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "section-gap": "128px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-edge": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "headline-xl": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "label-caps": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "body-lg": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #080808; color: #e2e2e2; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
+        .sharp-gradient { background: linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,1) 100%); }
+        .crimson-glow:focus { border-bottom: 1px solid #8B0000; outline: none; box-shadow: 0 4px 12px -4px rgba(139, 0, 0, 0.3); }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary-container selection:text-white">
+<!-- TopAppBar Component -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#080808] border-b border-[#121212]">
+<div class="flex justify-between items-center w-full px-12 py-8 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-[0.3em] text-[#8B0000] font-serif uppercase">MS ROSE DEN</div>
+<div class="hidden md:flex gap-12">
+<a class="font-serif uppercase tracking-[0.2em] text-xs font-light text-neutral-500 hover:text-white transition-all duration-500 ease-in-out cursor-pointer" href="#">THE DEN</a>
+<a class="font-serif uppercase tracking-[0.2em] text-xs font-light text-neutral-500 hover:text-white transition-all duration-500 ease-in-out cursor-pointer" href="#">TRAINING</a>
+<a class="font-serif uppercase tracking-[0.2em] text-xs font-light text-[#8B0000] border-b border-[#8B0000] pb-1 hover:text-white transition-all duration-500 ease-in-out cursor-pointer" href="#">PRESENCE</a>
+<a class="font-serif uppercase tracking-[0.2em] text-xs font-light text-neutral-500 hover:text-white transition-all duration-500 ease-in-out cursor-pointer" href="#">THE THRESHOLD</a>
+</div>
+<button class="font-serif uppercase tracking-[0.2em] text-xs font-light text-[#8B0000] hover:text-white transition-all duration-500 ease-in-out cursor-pointer">INQUIRE</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-24">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 grayscale" data-alt="A cinematic, low-light photograph of a high-end private atelier interior. The room is filled with deep obsidian shadows and sharp charcoal textures of heavy velvet and dark stone. A single, focused beam of light catches the edge of a mahogany desk and a crimson silk chair. The atmosphere is quiet, powerful, and exclusive, maintaining a Dark Atelier aesthetic with high-contrast chiaroscuro lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCklayuizOw5J8o__L2BAbgvGDozrHubTSoiQ0-z5_fYDbIvIWRBSDiCK6yBN4xeJctNwAfcJk5fkeTTas_e0-OF8jWwepRuh_YbrZ2MK25FlqZlh1lk5cfpscjnzl36MoJcdJtO_dQqfRCQbluooVis3yMX153l5K_F8XBRBO3GZB8eUuyY84T5Hh35Hf1D-gFoE-YIqg-DtWL6W-56sD3JI_8kP69y_z_M_4y5l0C0qEa3-Z7cN0hu3V1QWG-TNtHNXaeDY_PmoI"/>
+<div class="absolute inset-0 sharp-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<span class="font-label-caps text-label-caps text-primary-container mb-6 block tracking-[0.4em]">COMMANDING ATTENTION</span>
+<h1 class="font-display-lg text-display-lg text-on-background mb-8 leading-none">THE ART OF PRESENCE</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto opacity-80">
+                    From the digital ether to the weight of physical proximity. Ms Rose offers a spectrum of engagement designed for those who seek true architectural dominance.
+                </p>
+</div>
+</section>
+<!-- The Spectrum: Digital to Physical -->
+<section class="py-section-gap px-margin-edge max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Online Presence -->
+<div class="bg-surface-container-low p-12 border border-[#121212] flex flex-col justify-between min-h-[600px] hover:border-primary-container transition-colors duration-700">
+<div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-4xl text-primary-container" data-icon="edgesensor_high">edgesensor_high</span>
+<span class="font-label-caps text-label-caps text-neutral-600">01 / DIGITAL</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl mb-6">ONLINE SESSION</h2>
+<p class="font-body-md text-body-md text-secondary opacity-70 mb-8 leading-relaxed">
+                            Virtual mastery conducted through secure, high-fidelity encrypted channels. For those restricted by geography but bound by desire. These sessions focus on cognitive framing, protocol establishment, and psychological architectural shifts.
+                        </p>
+<ul class="space-y-4 mb-12">
+<li class="flex items-center gap-3 text-sm tracking-widest uppercase font-label-caps text-neutral-400">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> 60-Minute Intensive
+                            </li>
+<li class="flex items-center gap-3 text-sm tracking-widest uppercase font-label-caps text-neutral-400">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> Secure Video Link
+                            </li>
+<li class="flex items-center gap-3 text-sm tracking-widest uppercase font-label-caps text-neutral-400">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> Protocol Review
+                            </li>
+</ul>
+</div>
+<button class="w-full py-6 bg-primary-container text-white font-label-caps text-label-caps tracking-[0.3em] hover:bg-[#a30000] transition-all duration-300">BOOK DIGITAL</button>
+</div>
+<!-- Offline Presence -->
+<div class="bg-surface-container-low p-12 border border-[#121212] flex flex-col justify-between min-h-[600px] hover:border-primary-container transition-colors duration-700">
+<div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-4xl text-primary-container" data-icon="location_on">location_on</span>
+<span class="font-label-caps text-label-caps text-neutral-600">02 / PHYSICAL</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl mb-6">OFFLINE SESSION</h2>
+<p class="font-body-md text-body-md text-secondary opacity-70 mb-8 leading-relaxed">
+                            The pinnacle of engagement. Real-world presence within the sanctuary of the Den. An immersive experience where every breath is regulated and every movement is observed. Subject to strict vetting and prior digital consultation.
+                        </p>
+<ul class="space-y-4 mb-12">
+<li class="flex items-center gap-3 text-sm tracking-widest uppercase font-label-caps text-neutral-400">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> The Den Sanctuary
+                            </li>
+<li class="flex items-center gap-3 text-sm tracking-widest uppercase font-label-caps text-neutral-400">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> Multi-Hour Immersions
+                            </li>
+<li class="flex items-center gap-3 text-sm tracking-widest uppercase font-label-caps text-neutral-400">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span> Advanced Vetting Required
+                            </li>
+</ul>
+</div>
+<button class="w-full py-6 bg-primary-container text-white font-label-caps text-label-caps tracking-[0.3em] hover:bg-[#a30000] transition-all duration-300">REQUEST ACCESS</button>
+</div>
+</div>
+</section>
+<!-- Clarification: Consultation vs Active Training -->
+<section class="py-section-gap bg-[#0c0c0c]">
+<div class="max-w-6xl mx-auto px-12">
+<div class="text-center mb-24">
+<h2 class="font-headline-xl text-headline-xl mb-4">THE DISTINCTION</h2>
+<div class="h-px w-24 bg-primary-container mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="flex-1 space-y-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary-container mb-4">CONSULTATION</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                A strategic assessment. Here, we define the parameters of your journey, identify psychological triggers, and architect the power dynamic. It is a dialogue of intent—necessary for all new subjects seeking long-term training.
+                            </p>
+</div>
+<div class="pt-8 border-t border-[#121212]">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">ACTIVE TRAINING</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                The execution of the architecture. Active sessions are the lived experience of dominance. There is no longer a dialogue of intent, only the manifestation of the established protocol. This is where the work happens.
+                            </p>
+</div>
+</div>
+<div class="flex-1 w-full aspect-square md:aspect-auto h-[500px]">
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="A minimalist architectural shot of a dark corridor with sharp shadows and a single, glowing red line on the floor. The lighting is extremely dramatic, with high contrast between deep obsidian blacks and a vibrant sharp crimson accent. The image conveys a sense of direction, discipline, and transition from one state to another within a luxury atelier setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6-rQRcVPOC7MlZ2aO1x4oNvV6fL-gw6Wc1bP6dvlSNAH-Ls0OxF7aDDFZYObsG6i4FbPqyuXAm_CaXJ3_Me3I4kmoWMyzHnFVXaI5B1T9dq6q6Ye8v_6v-_lDPDB7AufEjX8zk6L3OXB7z8La6vWBg8sJd8znvrAPVREQOSmUH0sPIcOYv7O6ni55ElgUdzs4XW6OdRLRGj-6E7bBBbxY6wKYobs4Sph9_-8gfCjqnqfwwRLFHhXJAy3oxQgtIpuegKsE7lKokJ0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking & Inquiry -->
+<section class="py-section-gap px-12 max-w-4xl mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl mb-12">INITIATE THE THRESHOLD</h2>
+<form class="space-y-12 text-left">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-neutral-500 uppercase">IDENTIFICATION</label>
+<input class="bg-transparent border-b border-[#333] py-4 crimson-glow text-white font-serif tracking-widest placeholder:text-neutral-700" placeholder="YOUR NAME / ALIAS" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-neutral-500 uppercase">INTENT</label>
+<select class="bg-transparent border-b border-[#333] py-4 crimson-glow text-white font-serif tracking-widest appearance-none cursor-pointer">
+<option class="bg-[#080808]">ONLINE CONSULTATION</option>
+<option class="bg-[#080808]">OFFLINE SESSION REQUEST</option>
+<option class="bg-[#080808]">LONG-TERM TRAINING</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-neutral-500 uppercase">MESSAGE / DECLARATION</label>
+<textarea class="bg-transparent border-b border-[#333] py-4 crimson-glow text-white font-serif tracking-widest placeholder:text-neutral-700 resize-none" placeholder="DESCRIBE YOUR OBJECTIVE" rows="4"></textarea>
+</div>
+<div class="flex justify-center pt-12">
+<button class="px-24 py-6 bg-primary-container text-white font-label-caps text-label-caps tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700" type="submit">SUBMIT INQUIRY</button>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-[#080808] border-t border-[#121212]">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8 max-w-[1920px] mx-auto">
+<div class="text-lg font-bold text-[#8B0000] font-serif tracking-[0.2em]">MS ROSE DEN</div>
+<div class="flex gap-8">
+<a class="font-serif uppercase tracking-[0.15em] text-[10px] text-neutral-600 hover:text-[#8B0000] transition-colors duration-300" href="#">PRIVACY</a>
+<a class="font-serif uppercase tracking-[0.15em] text-[10px] text-neutral-600 hover:text-[#8B0000] transition-colors duration-300" href="#">TERMS</a>
+<a class="font-serif uppercase tracking-[0.15em] text-[10px] text-neutral-600 hover:text-[#8B0000] transition-colors duration-300" href="#">CONTACT</a>
+</div>
+<div class="font-serif uppercase tracking-[0.15em] text-[10px] text-neutral-600">
+                © MMXXIV MS ROSE DEN. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

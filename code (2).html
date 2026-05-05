@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Newsreader:opsz,wght@6-72,200;300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e5e2e1",
+                        "primary": "#ffb4a8",
+                        "primary-container": "#990000",
+                        "background": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "inverse-primary": "#b82014",
+                        "on-primary-fixed-variant": "#930000",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-secondary-container": "#bab8b7",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "error": "#ffb4ab",
+                        "on-background": "#e5e2e1",
+                        "secondary": "#c8c6c5",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#3a3939",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#bab8b8",
+                        "on-secondary": "#313030",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#4a4949",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-container": "#ffa092",
+                        "on-surface-variant": "#e4beb8",
+                        "tertiary": "#c8c6c5",
+                        "tertiary-container": "#4a4949",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "outline": "#ab8983",
+                        "on-tertiary": "#313030",
+                        "surface-tint": "#ffb4a8",
+                        "outline-variant": "#5b403c",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "on-primary": "#690000",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed": "#410000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-max": "1200px",
+                        "section-gap": "128px",
+                        "gutter": "24px",
+                        "margin-page": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Newsreader"],
+                        "headline-md": ["Newsreader"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Newsreader"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .protocol-border { border-bottom: 1px solid #262626; }
+        .signature-divider { display: flex; align-items: center; width: 100%; height: 1px; background: #262626; position: relative; }
+        .signature-divider::before { content: ''; position: absolute; left: 0; top: -2px; width: 4px; height: 4px; background: #990000; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="flex justify-between items-center px-12 h-24 w-full bg-[#0A0A0A] fixed top-0 z-50 border-b border-[#262626]">
+<div class="text-2xl font-light tracking-tighter text-[#990000] Newsreader">Ms Rose Den</div>
+<div class="hidden md:flex gap-12 font-serif tracking-[0.2em] uppercase text-xs">
+<a class="text-neutral-500 pb-1 hover:text-neutral-200 transition-colors duration-500" href="#">The Den</a>
+<a class="text-neutral-500 pb-1 hover:text-neutral-200 transition-colors duration-500" href="#">Training Chamber</a>
+<a class="text-[#990000] border-b border-[#990000] pb-1 hover:text-neutral-200 transition-colors duration-500" href="#">Consultation</a>
+<a class="text-neutral-500 pb-1 hover:text-neutral-200 transition-colors duration-500" href="#">The Threshold</a>
+</div>
+<button class="bg-[#990000] text-on-surface px-8 py-2 text-label-caps font-label-caps uppercase tracking-widest hover:opacity-70 transition-opacity">Inquire</button>
+</nav>
+<main class="mt-24">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col justify-center items-center text-center px-64 relative bg-surface-container-lowest">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover grayscale" data-alt="An architectural detail of a high-end minimalist atelier with sharp linear shadows falling across a concrete wall. The mood is cold and authoritative, reflecting a dark atelier aesthetic with deep blacks and subtle grey tones. Cinematic soft lighting emphasizes the precise textures and professional clinical atmosphere of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTZLCECHjnOqHsnTtclrvE6PPZunnTjeu3KLuctmzcKD4igNgefbuUryv2zTAz9K2fAtt055RPJzGUlWxGhl0N4TaB1tXPkXqevGt0V2jSIxb56jBNkHDmT-QTDnPSyg7KpVXR3XhDm2HFgl-aJTrlf5byp_UfeP1CK4SU0yRCh9CjvSXbOFg8_soiStUoFr2CkkgaCUVEPHpsvYrWM3TDYuz6AzMCN24O23YB_Pv1fFTI33VXpWZspE36wEWXKcE79Vja6hEt_eY"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label-caps text-label-caps text-primary mb-6">PROTOCOL ALPHA-4</p>
+<h1 class="font-headline-xl text-headline-xl mb-8">Presence &amp; Consultation</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-12">
+                    A transition from the digital abstract to the physical absolute. Select your medium of engagement for high-stakes psychological and structural alignment.
+                </p>
+<div class="signature-divider mx-auto w-32"></div>
+</div>
+</section>
+<!-- Service Modes (Bento Layout) -->
+<section class="px-12 py-32 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-12 gap-6">
+<!-- Digital Presence -->
+<div class="col-span-12 lg:col-span-7 bg-surface-container p-12 border border-[#262626] relative overflow-hidden group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary mb-8" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Digital Synthesis</h2>
+<p class="font-body-md text-body-md text-secondary mb-8 max-w-md">Encrypted video sessions designed for strategic clarity. Remote consultation without geographic compromise. Global accessibility for high-priority individuals.</p>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center protocol-border pb-4">
+<span class="font-label-caps text-label-caps text-on-surface">SESSION DURATION</span>
+<span class="font-body-md text-body-md">50 MINUTES</span>
+</div>
+<div class="flex justify-between items-center protocol-border pb-4">
+<span class="font-label-caps text-label-caps text-on-surface">MEDIUM</span>
+<span class="font-body-md text-body-md">SECURE STREAM</span>
+</div>
+</div>
+<button class="mt-12 bg-primary-container text-on-surface px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:opacity-80 transition-all">Select Protocol</button>
+</div>
+</div>
+<!-- Physical Presence -->
+<div class="col-span-12 lg:col-span-5 bg-surface-container-high p-12 border border-[#262626] flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary mb-8">location_on</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Physical Threshold</h2>
+<p class="font-body-md text-body-md text-secondary mb-8">Direct entry into The Den. A controlled environment for total immersion. Strict adherence to spatial protocols required.</p>
+</div>
+<div class="space-y-6">
+<div class="protocol-border pb-4">
+<p class="font-label-caps text-label-caps text-primary mb-2">LOCATION</p>
+<p class="font-body-md text-body-md">UNDISCLOSED // PRIVATE ATELIER</p>
+</div>
+<button class="w-full border border-[#262626] text-on-surface py-4 font-label-caps text-label-caps uppercase tracking-widest hover:border-primary transition-colors">Apply for Entrance</button>
+</div>
+</div>
+<!-- Consultation Protocol -->
+<div class="col-span-12 lg:col-span-12 bg-[#0E0E0E] p-12 border border-[#262626] flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/3">
+<img class="w-full h-96 object-cover grayscale opacity-50" data-alt="A clinical observation room with a single obsidian table and sharp industrial lighting. The aesthetic is cold and sterile, using a dark atelier palette of deep charcoal and silver. The atmosphere suggests high-stakes professional consultation and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9plH5Z12fQVEuqzniZzPt_ux84X2rxyFsXC03BbTMKgRU-Ve3Clvd7QODm8zlA1rPt9LtRWR2qKYN4cMN6bTieDaup9DKC2pMbFjvU-9d_ohpRLojU7jDYCLLPFpoQqTCIXGTZiniWfIU3v-AWkWbZ3xitxm_aIzauy6iYAOIdD1UXNhmQ5kgLr6PjAf1FVlbDm5Oew0v6ItQPjVJMWHZX6JDRpQA9i0Bfxz2tv9R1OuTXIkIOm7o7cE3-aMXlvRMqfB7Zfz_ko"/>
+</div>
+<div class="w-full md:w-2/3">
+<p class="font-label-caps text-label-caps text-primary mb-4">STRATEGIC ALIGNMENT</p>
+<h2 class="font-headline-lg text-headline-lg mb-6">Initial Assessment &amp; Deep Consultation</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10">Before training commences, a rigorous diagnostic phase is mandatory. We analyze existing structures, psychological baselines, and ultimate objectives. This is not a conversation; it is a blueprinting session for your evolution.</p>
+<div class="grid grid-cols-2 gap-8 mb-12">
+<div>
+<h4 class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest border-b border-[#262626] pb-2 mb-4">Focus A</h4>
+<p class="font-body-md text-body-md">Cognitive Pattern Analysis</p>
+</div>
+<div>
+<h4 class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest border-b border-[#262626] pb-2 mb-4">Focus B</h4>
+<p class="font-body-md text-body-md">Structural Vulnerability Audit</p>
+</div>
+</div>
+<button class="bg-[#990000] text-on-surface px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110">Initiate Audit</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sophisticated Scheduling Interface -->
+<section class="bg-surface-container-lowest py-32 px-12 border-t border-[#262626]">
+<div class="max-w-screen-xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-xl mb-4">Temporal Allocation</h2>
+<p class="font-body-lg text-body-lg text-secondary">The calendar is a finite resource. Precision in scheduling is the first requirement of the protocol.</p>
+</div>
+<div class="flex items-center gap-6">
+<button class="p-4 border border-[#262626] hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="font-headline-md text-headline-md min-w-[200px] text-center">OCTOBER 2024</span>
+<button class="p-4 border border-[#262626] hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-px bg-[#262626] border border-[#262626]">
+<!-- Calendar Header -->
+<div class="bg-surface-container p-6 text-center font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase">Mon</div>
+<div class="bg-surface-container p-6 text-center font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase">Tue</div>
+<div class="bg-surface-container p-6 text-center font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase">Wed</div>
+<div class="bg-surface-container p-6 text-center font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase">Thu</div>
+<div class="bg-surface-container p-6 text-center font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase">Fri</div>
+<div class="bg-surface-container p-6 text-center font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase">Sat</div>
+<div class="bg-surface-container p-6 text-center font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase">Sun</div>
+<!-- Calendar Days (Abbreviated Sample) -->
+<div class="bg-surface-container-lowest h-40 p-6 opacity-30 font-body-md">28</div>
+<div class="bg-surface-container-lowest h-40 p-6 opacity-30 font-body-md">29</div>
+<div class="bg-surface-container-lowest h-40 p-6 opacity-30 font-body-md">30</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">1</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">2</div>
+<div class="bg-surface-container-low h-40 p-6 font-body-md relative group cursor-pointer hover:bg-surface-container transition-colors">
+<span>3</span>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="w-full h-1 bg-[#990000]"></div>
+<p class="text-[9px] font-label-caps mt-2 uppercase tracking-tighter text-primary">Limited Slots</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">4</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">5</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">6</div>
+<div class="bg-surface-container-low h-40 p-6 font-body-md relative cursor-pointer bg-primary-container text-on-surface">
+<span>7</span>
+<div class="absolute bottom-6 left-6 right-6">
+<p class="text-[9px] font-label-caps uppercase tracking-tighter">Selected</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">8</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">9</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">10</div>
+<div class="bg-surface-container-lowest h-40 p-6 font-body-md">11</div>
+</div>
+<div class="mt-16 flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="w-full md:w-1/2">
+<h4 class="font-label-caps text-label-caps text-on-surface mb-8">AVAILABLE SLOTS (LOCAL TIME)</h4>
+<div class="space-y-4">
+<button class="w-full text-left p-6 border border-[#262626] hover:border-primary flex justify-between items-center transition-all">
+<span class="font-body-md">09:00 — 10:00 ASSESSMENT</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="w-full text-left p-6 border border-[#990000] bg-surface-container flex justify-between items-center transition-all">
+<span class="font-body-md text-primary">14:30 — 15:30 CONSULTATION</span>
+<div class="w-2 h-2 bg-primary"></div>
+</button>
+<button class="w-full text-left p-6 border border-[#262626] hover:border-primary flex justify-between items-center transition-all">
+<span class="font-body-md">17:00 — 18:00 STRATEGY</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/3 bg-surface-container p-10 border border-[#262626]">
+<h4 class="font-label-caps text-label-caps text-primary mb-6">SUMMARY</h4>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between font-body-md text-secondary">
+<span>Type:</span>
+<span class="text-on-surface">Consultation</span>
+</div>
+<div class="flex justify-between font-body-md text-secondary">
+<span>Date:</span>
+<span class="text-on-surface">Oct 07, 2024</span>
+</div>
+<div class="flex justify-between font-body-md text-secondary">
+<span>Time:</span>
+<span class="text-on-surface">14:30 EST</span>
+</div>
+</div>
+<div class="signature-divider mb-8"></div>
+<button class="w-full bg-[#990000] text-on-surface py-5 font-label-caps text-label-caps uppercase tracking-widest">Confirm &amp; Secure Session</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Requirements Section -->
+<section class="px-12 py-32 max-w-screen-xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-8">Preliminary Protocols</h3>
+<div class="space-y-12">
+<div class="flex gap-8">
+<span class="font-headline-md text-[#990000]">01</span>
+<div>
+<h5 class="font-label-caps text-label-caps mb-2">NDA &amp; PRIVACY</h5>
+<p class="font-body-md text-secondary">All consultations are governed by a strict non-disclosure framework. Identity verification is required prior to session confirmation.</p>
+</div>
+</div>
+<div class="flex gap-8">
+<span class="font-headline-md text-[#990000]">02</span>
+<div>
+<h5 class="font-label-caps text-label-caps mb-2">ENVIRONMENTAL CONTROL</h5>
+<p class="font-body-md text-secondary">For digital sessions, participants must be in a private, noise-free environment. Distractions invalidate the protocol.</p>
+</div>
+</div>
+<div class="flex gap-8">
+<span class="font-headline-md text-[#990000]">03</span>
+<div>
+<h5 class="font-label-caps text-label-caps mb-2">INTENT CLARITY</h5>
+<p class="font-body-md text-secondary">A brief statement of objective must be submitted upon booking. We do not engage with ambiguity.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-1 bg-opacity-50">
+<img class="w-full grayscale brightness-75 border border-[#262626]" data-alt="A macro shot of high-quality black architectural paper with a subtle embossed logo. The lighting is low-key and dramatic, revealing fine fiber textures and a clinical sense of permanence. This image represents the physical documentation and absolute professionalism of the atelier's protocols." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQSALPGy7ncbUMGCWIUii2V_gFrnVT6snv9Rf6sJzqSXyqXqtO5eNlTmjc1spych4rFXK951V6aJIlUgx_Ecu9RWWb-3UsO62aT6-fUBkEyrbxKsAi11Da-FEj35gV5Rvyp7vVYG7XtHUTEFZoGsUHhq3ch4MpO_vY2RjJR9BVpL8KNIYyGi18_aG_R5jPcek_fozOwmaLHCHaalkchNjWWiZ1kJjtUfS4HX81JEkoOy6eG5mScF-zpJOYO8crTMLnsKyylTB-ocE"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center px-12 py-20 w-full gap-8 bg-[#0A0A0A] border-t border-[#262626]">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-semibold text-[#990000] Newsreader uppercase tracking-[0.3em]">Ms Rose Den</div>
+<div class="font-serif text-[10px] tracking-widest uppercase text-neutral-600">© MS ROSE DEN. ARCHITECTURAL DOMINANCE.</div>
+</div>
+<div class="flex gap-10 font-serif text-[10px] tracking-widest uppercase Newsreader">
+<a class="text-neutral-600 hover:text-neutral-300 transition-colors duration-300" href="#">Legal</a>
+<a class="text-neutral-600 hover:text-neutral-300 transition-colors duration-300" href="#">Privacy</a>
+<a class="text-neutral-600 hover:text-neutral-300 transition-colors duration-300" href="#">Terms</a>
+<a class="text-neutral-600 hover:text-neutral-300 transition-colors duration-300" href="#">Contact</a>
+</div>
+</footer>
+</body></html>
